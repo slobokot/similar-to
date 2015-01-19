@@ -50,7 +50,7 @@ name : Jimmy
 
 ### Array
 ```
-{ colors : [red,green,blue]  }
+{ colors : {red,green,blue}  }
 ```
 
 ### Map
@@ -61,6 +61,12 @@ name : Jimmy
 ## Usage example
 ```
 import static com.slobokot.similarto.SimilarToMatchers.similarTo;
+
+class Person {
+	String getName();
+	String getSurname();
+	List<String> getFavouriteTvPrograms();
+}
 
 assertThat(person, similarTo(" { name : Jimmy, " +
     " surname : Great " +
